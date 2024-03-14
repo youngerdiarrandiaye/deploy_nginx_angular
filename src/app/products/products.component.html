@@ -1,0 +1,40 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-body">
+      <div class="d-flex justify-content-between align-items-center">
+        <input type="text" [(ngModel)]="keyword" placeholder="Rechercher un produit..." class="form-control">
+        <button (click)="searchProducts()" class="btn btn-success">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+      <div class="table-responsive mt-3">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th scope="col">Nom</th>
+            <th scope="col">Prix</th>
+            <th scope="col">Statut</th>
+            <th scope="col">Actions</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let product of products">
+            <td>{{ product.name }}</td>
+            <td>{{ product.price }}</td>
+            <td>
+              <button (click)="handleCheckProduct(product)" class="btn btn-outline-success">
+                <i class="bi" [ngClass]="product.checked ? 'bi-check' : 'bi-circle'"></i>
+              </button>
+            </td>
+            <td>
+              <button (click)="handleDelete(product)" class="btn btn-outline-danger">
+                <i class="bi bi-trash"></i>
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

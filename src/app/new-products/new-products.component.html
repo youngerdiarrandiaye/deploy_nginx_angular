@@ -1,0 +1,28 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header" style="background-color: #6c757d;">
+          <h4 class="mb-0" style="color: #fff;">Formulaire de Produit</h4>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="productForm" (ngSubmit)="saveProduct()">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nom du Produit</label>
+              <input id="name" class="form-control" formControlName="name">
+            </div>
+            <div class="mb-3">
+              <label for="price" class="form-label">Prix du Produit</label>
+              <input id="price" class="form-control" formControlName="price">
+            </div>
+            <div class="mb-3 form-check">
+              <input id="checked" type="checkbox" class="form-check-input" formControlName="checked">
+              <label for="checked" class="form-check-label">Vérifié</label>
+            </div>
+            <button [disabled]="productForm.invalid" type="submit" class="btn btn-primary" style="background-color: #6c757d;">Enregistrer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
