@@ -3,19 +3,25 @@
     {
       "name": "vanne",
       "price": "888",
-      "checked": true,
+      "checked": false,
       "id": "15"
     },
     {
       "name": "test",
       "price": "600",
-      "checked": true,
+      "checked": false,
       "id": "16"
     },
     {
       "id": "a6cc",
       "name": "JEE",
       "price": "8888",
+      "checked": false
+    },
+    {
+      "id": "81e6",
+      "name": "test",
+      "price": 0,
       "checked": true
     }
   ]

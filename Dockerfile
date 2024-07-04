@@ -16,7 +16,7 @@ EXPOSE 80
 EXPOSE 443
 # Installation de Node.js et npm pour exécuter JSON Server
 RUN apt-get update && apt-get install -y curl
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
+#RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs npm
 # Création du répertoire de l'application
 RUN mkdir -p /app
